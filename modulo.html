@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modulo di iscrizione</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<h1>Modulo di iscrizione</h1>
+
+<form action="https://postb.in/1674245555422-1912563727237" method="get" id="delivery" autocomplete="on">
+    <div>
+        <div style="display: inline"><label for="nome">Nome</label></div>
+        <div style="display: inline">
+            <input type="text" name="nome" placeholder="nome" id="nome">
+        </div>
+    </div>
+    <div>
+        <div style="display: inline"><label for="cognome">Cognome</label></div>
+        <div style="display: inline">
+            <input type="text" name="cognome" placeholder="cognome" id="cognome">
+        </div>
+    </div>
+    <div>
+        <div style="display: inline"><label for="data">Data di nascita</label></div>
+        <div style="display: inline">
+            <input type="date" name="data" id="data">
+        </div>
+    </div>
+    <div>
+        <div style="display: inline">Sesso</div>
+        <div style="display: inline">
+            <input type="radio" name="sesso" id="maschio">
+        </div>
+        <div style="display: inline"><label for="maschio">M</label></div>
+        <div style="display: inline">
+            <input type="radio" name="sesso" id="femmina">
+        </div>
+        <div style="display: inline"><label for="femmina">F</label></div>
+    </div>
+    <div>
+        <div style="display: inline"><label for="tel">Telefono</label></div>
+        <div style="display: inline">
+            <input type="number" name="tel" id="tel">
+        </div>
+    </div>
+    <div>
+        <div style="display: inline"><label for="prov">Provincia</label></div>
+        <div style="display: inline"><select id="prov" name="prov">
+            <option value="Mi">Milano</option>
+            <option value="Rm">Roma</option>
+            <option value="Sr">Siracusa</option>
+            <option value="Vt">Viterbo</option>
+            <option value="empty" selected></option>
+        </select></div>
+    </div>
+    <div>
+        Secondo quali modalità si desidera ricevere maggiori informazioni?
+        <div>
+            <input type="checkbox" name="postaord" id="postaord">
+            <label for="postaord">Posta ordinaria</label>
+        </div>
+        <div>
+            <input type="checkbox" name="postaele" id="postaele">
+            <label for="postaele">Posta elettronica</label>
+        </div>
+        <div><input type="checkbox" name="telefono" id="telefono">
+            <label for="telefono">Telefono</label>
+        </div>
+
+    </div>
+    <div>
+        <div style="display: inline"><label for="note">Note</label></div>
+        <div style="display: inline">
+            <textarea id="note" name="note" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="INVIA" name="invia">
+    </div>
+</form>
+
+<button type="reset" form="delivery">RESET</button>
+</body>
+</html>
