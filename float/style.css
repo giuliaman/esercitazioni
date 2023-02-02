@@ -1,0 +1,90 @@
+/*STEP 1: box sizing and lobotomized owl*/
+:root{
+    box-sizing: border-box;
+}
+
+*,::before,::after{
+    box-sizing: inherit;
+}
+
+body * + *{
+    margin-top:1.5em;
+}
+
+/*STEP 2: generic style rules*/
+body{
+    background-color: lightgray;
+    font-family:Arial, sans-serif ;
+}
+
+header{
+    background-color: teal;
+    color:white;
+    font-size:1.5em;
+    padding:1.5em;
+}
+
+header h1{
+    margin:0.1em 0;
+}
+main{
+    background-color: white;
+    padding:1em 2em;
+}
+
+header, main, article{
+    border-radius: 5px;
+}
+
+main section h2{
+    font-size: 1.5em;
+}
+
+article.item{
+    background-color:#dfe7e7;
+    padding:1em;
+}
+
+article.item h3{
+    margin:0;
+}
+
+.container{
+    max-width:1080px;
+    margin:0 auto;
+}
+
+article{
+    width:50%;
+    float:left;
+}
+/*correzione impaginazione float*/
+section::after{
+    display: block;
+    content: '';
+    clear:both;
+}
+
+/*margin degli articoli*/
+article{
+    margin:0 1.5em 1.5em 0;
+    width:calc(100% / 2 - 1.5em);
+    /*oppure width:calc(50%- 1.5em);*/
+}
+/* se ogni articolo avesse una descrizione di diversa lunghezza, per far si che i blocchi rispettino la riga utilizzare questo*/
+.articles > :nth-child(2n+1){
+    clear:both;
+}
+
+/*affiancare immagine e testo*/
+.item img{
+    margin-right:1em;
+    float: left;
+    width:calc(40% - 1em);
+}
+
+.item h3, .item p{
+    float:left;
+    width:60%;
+}
+
