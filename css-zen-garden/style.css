@@ -1,73 +1,68 @@
-*{
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300&display=swap');
+@import "header.css";
+@import "main.css";
+
+/*generic rules*/
+:root{
     box-sizing: border-box;
+}
+*,::before,::after{
+    padding: 0;
+    box-sizing: inherit;
     margin: 0;
 }
 body{
-    margin:0 20px;
-}
-body a{
-    color:red;
-}
-body a:hover{
-    color:green;
-}
-div.page-wrapper{
-    background-color: antiquewhite;
-}
-header{
-    text-align: center;
-    padding:30px;
-}
-header h1{
-    font-size: 50px;
-}
-.summary{
-    text-align: center;
-    width:30%;
-    margin: auto;
-}
-.preamble{
-    text-align: center;
-    background:linear-gradient(45deg,rgba(244,244,244,0.8),rgba(211,251,255,0.1)), url("embossed-diamond.webp") repeat;
-    background-clip:padding-box;
-    padding:30px;
-    margin:50px 20px;
-    border: red 10px dotted;
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
 }
 
-.explanation, .participation{
-    float: left;
-    width:calc(100% / 2 - 20px);
-    padding:20px;
+h1,h2,h3,h4,h5,h5{
+    font-family: 'Anton',cursive;
+    padding:0.2em 0;
 }
-.benefits{
-    float: left;
-    padding:20px;
-    width:100%;
+
+p{
+    font-size:0.9em;
+}
+
+/*LINK*/
+a:visited{
+    color: blue;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*container*/
+.page-wrapper{
     position: relative;
-    height:200px;
 }
-.benefits>h3, .benefits>p{
-    width:50%;
-}
-.supporting .requirements{
-    clear: both;
-}
-.requirements{
-    padding:20px;
+#zen-preamble, #zen-explanation, #zen-benefits, #zen-participation, #zen-requirements{
+    width:calc(100% - 40%);
+    padding:1em 2em;
+    position: relative;
 }
 
-footer>a:nth-child(2){
-    color:blue;
-    text-decoration: wavy underline;
+/* sidebar*/
+aside{
+    position:absolute;
+    right: 0;
+    top: 15%;
+    width: 32.75%;
+    background-color: khaki;
+    padding:1.5em;
+    margin-right:1.5em;
 }
 
-div.design-selection a:nth-child(odd){
-    color: red;
+aside .wrapper ul{
+    list-style: none;
 }
-
-div#zen-explanation.explanation:before{
+/*div#zen-explanation.explanation:before{
     content:'';
     width:200px;
     height:100px;
@@ -93,4 +88,4 @@ div#zen-benefits.benefits:after{
     right:20px;
     top:20px;
 
-}
+}*/
