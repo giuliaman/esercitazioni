@@ -70,62 +70,61 @@ a{
 }
 #zen-participation{
     position: relative;
-    margin-top:5em;
+    margin-top:3em;
+    width:calc(100% - 40%);
 }
-#zen-participation h3, #zen-participation p{
-    width:calc(100% - 40% - 4em);
+#zen-benefits{
+    position: relative;
+    margin-top:3em;
 }
-#zen-participation:after {
+#zen-benefits h3, #zen-benefits p{
+    width:calc(100% - 60% - 4em);
+}
+#zen-benefits:after {
     content: '';
-    width: 40%;
+    width: 25%;
     height: 250px;
-    background: url("https://cssversicherung.scene7.com/is/image/csskrankenversicherung/css-logo-schutzzone-large:image-2-1?wid=1600&fit=constrain,0&resMode=sharp2&noCache=1667821701245") no-repeat;
-    background-size:contain;
+    background: url("https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries/container-query-examples.png") no-repeat;
+    background-size:cover;
     display: block;
     position: absolute;
-    right: 2em;
-    top:5em;
+    right: 40%;
+    top:0;
 }
 
-#zen-benefits{
-    float: left;
-    width:30%;
-    background-color: rgba(205, 92, 92, 0.3);
-    padding:2em;
-    margin-top:5em;
-}
 #zen-requirements{
-    float: left;
-    width:calc(100% - 30% - 2em);
+    width:calc(100% - 40%);
     padding:2em;
     margin: 5em 0;
-    background-color: khaki;
+    background-color: darkcyan;
+    color:white;
 }
-#zen-requirements:after{
-    clear: right;
-    content: '';
-    display: table;
+#zen-requirements a{
+    color:white;
+    border-bottom:1px solid white;
 }
+
 div.requirements p:last-child{
-    border-top:1px solid indianred;
+    border-top:1px solid white;
     text-transform: uppercase;
     padding-top:1em;
     margin-top:1em;
 }
 /* sidebar*/
 aside{
-    position:absolute;
+    position:fixed;
     right: 0;
-    top: 10%;
+    top: 0;
     width: 32.75%;
     background-color: khaki;
     padding:1.5em;
     margin-right:1.5em;
+    height:100vh;
 }
 
 aside .wrapper ul{
     list-style: none;
-    line-height: 30px;
+    line-height: 1.6em;
     margin-bottom: 30px;
 }
 
@@ -135,18 +134,19 @@ aside h3{
 
 /*footer*/
 footer{
-    background: teal;
+    background: indianred;
     clear: both;
     color: #fff;
     padding: 1em 5%;
-    width: 100%;
+    width: calc(100% - 40%);
     position: relative;
     margin-top:2em;
 }
 footer a{
     color: white;
     font-size: 1.5em;
-    padding: 0 0.5em;
+    margin: 0 0.5em;
+    border-bottom: 1px solid white;
 }
 
 /*div#zen-explanation.explanation:before{
