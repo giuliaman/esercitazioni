@@ -1,0 +1,12 @@
+/*STEP 1: box sizing and lobotomized owl*/
+:root{
+    box-sizing: border-box;
+}
+
+*,::before,::after{
+    box-sizing: inherit;
+}
+
+body * + *{
+    margin-top:1.5em;
+}
