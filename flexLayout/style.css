@@ -8,5 +8,139 @@
 }
 
 body * + *{
-    margin-top:1.5em;
+    margin-top:1em;
 }
+
+body{
+    background-color: teal;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+/*MENU*/
+.site-nav{
+    background-color: maroon;
+    display: flex;
+    padding:1em;
+    list-style: none;
+    border-radius: 5px;
+}
+.site-nav > li{
+    margin-top:0;
+    background-color: #b94a4a;
+    border-radius: 5px;
+}
+.site-nav > li:hover{
+    background-color: #e16c6c;
+}
+/*tutti tranne il primo*/
+.site-nav > li + li{
+    margin-left: 1em;
+}
+.site-nav > li a{
+    display: block;
+    padding:1em 2em;
+    color: white;
+    text-decoration: none;
+}
+.site-nav > .nav-right{
+    margin-left: auto;
+}
+
+/*corpo*/
+main{
+    display: flex;
+}
+main > * + *{ /*oppure .column-right*/
+    margin-top:0;
+    margin-left: 1.5em;
+}
+.tile{
+    background-color: white;
+    border-radius: 5px;
+    padding:1.5em;
+}
+.tile > h1, .tile > h3{
+    margin-top:.5em;
+}
+.column-main{
+    flex:2;
+}
+.column-right{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.column-right > .tile{
+    flex: 1;
+}
+
+/*SIDEBAR*/
+.column-right .tile > h3{
+    text-transform: uppercase;
+    text-align: right;
+    margin: 0;
+    font-size: .9em;
+}
+.login-form label{
+    font-weight: bold;
+    display: block;
+}
+.login-form input[type="text"], .login-form input[type="password"]{
+    margin-top:.5em;
+    width: 100%;
+    display: block;
+    border:1px solid #dedede;
+    padding:.5em 1em;
+}
+.login-form button{
+    background-color: white;
+    border: 1px solid brown;
+    padding:.5em 1em;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.login-form button:hover{
+    background-color: #e16c6c;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.centered{
+    text-align: center;
+}
+.cost{
+    display: flex;
+    justify-content: center; /*queste due proprietà fanno si che le 3 classi all'interno di cost siano inline e centrate al centro*/
+    align-items: center;
+}
+.cost > span{
+    margin-top:0;
+}
+.currency{
+    font-size: 1.5em;
+}
+.dollars{
+    font-size: 4em;
+}
+.cents{
+    font-size: 1.5em;
+}
+a.cta-button{
+    background-color: #b94a4a;
+    color: white;
+    text-decoration: none;
+    padding:.5em 1em;
+    width:100%;
+    display: block;
+    border-radius: 3px;
+}
+a.cta-button:hover{
+    background-color: #e16c6c;
+}
+
