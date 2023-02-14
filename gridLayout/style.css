@@ -1,0 +1,26 @@
+/*STEP 1: box sizing and lobotomized owl*/
+:root{
+    box-sizing: border-box;
+}
+
+*,::before,::after{
+    box-sizing: inherit;
+}
+
+body * + *{
+    margin-top:1em;
+}
+
+body{
+    background-color: teal;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+/*MENU*/
+
+
