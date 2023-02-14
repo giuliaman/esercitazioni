@@ -1,4 +1,4 @@
-/*STEP 1: box sizing and lobotomized owl*/
+/*STEP 1: box sizing */
 :root{
     box-sizing: border-box;
 }
@@ -7,10 +7,7 @@
     box-sizing: inherit;
 }
 
-body * + *{
-    margin-top:1em;
-}
-
+/*CORPO*/
 body{
     background-color: teal;
     font-family: Arial, sans-serif;
@@ -20,7 +17,62 @@ body{
     max-width:1000px;
     margin:0 auto;
 }
+/*GRID*/
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4,auto);
+    grid-gap: 1.5em;
+}
+header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+nav{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-color: maroon;
+    border-radius: 5px;
+}
+main{
+    grid-column: 1/2;
+    grid-row:3/5;
+}
+.sidebar-top{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.sidebar-bottom{
+    grid-column:2/3 ;
+    grid-row:4/5;
+}
 
-/*MENU*/
+/*style*/
+.site-nav{
+    list-style: none;
+    display: flex;
+}
+.site-nav > li{
+    background-color: #b94a4a;
+    border-radius: 5px;
+}
+.site-nav > li:hover{
+    background-color: #e16c6c;
+}
+/*tutti tranne il primo*/
+.site-nav > li + li{
+    margin-left: 1em;
+}
+.site-nav > li > a{
+    display: block;
+    padding:1em 2em;
+    color:white;
+    text-decoration: none;
+}
+.site-nav > .nav-right{
+    margin-left: auto;
+    margin-right:1em;
+}
+
 
 
