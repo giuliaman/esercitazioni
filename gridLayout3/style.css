@@ -1,0 +1,71 @@
+/*STEP 1: box sizing */
+:root{
+    box-sizing: border-box;
+}
+
+*,::before,::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+
+/*CORPO*/
+.portfolio{
+    width:980px;
+    margin:0 auto;
+    background-color: #709b90;
+    padding:1em;
+}
+figure{
+    margin:0;
+}
+
+figure img{
+    max-width: 100%;
+    margin:0;
+    display: block;
+}
+figure figcaption{
+    margin: 0;
+    padding: .3em .8em;
+    background-color: rgba(0,0,0,0.5);
+    text-align: right;
+}
+
+/*GRID*/
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    /*imposta il valore per ogni track creata, che sarà normalmente di 1fr, ma qualora lo spazio non si disponibile si ridurrà fino a 200px*/
+    grid-auto-rows: 1fr;
+    /*analogamente imposta un grid-track orizzontale implicito di 1fr.*/
+    grid-gap: 1em;
+}
+
+.portfolio .featured{
+    grid-column: span 2;
+    grid-row: span 2;
+    /*fa in modo che i grid item con classe featured si espandano per 2 righe e 2 colonne*/
+}
+
+/*GRID DENSE*/
+.portfolio{
+    grid-auto-flow: dense;
+    /*altera il comportamento dell’algoritmo di auto
+generazione e combina gli elementi del layout, modificando il
+posizionamento delle figure in modo da “ridurre” lo spazio
+indesiderato.*/
+}
+/*distribuire gli spazi in verticale*/
+figure{
+    display: flex;
+    flex-direction: column;
+}
+figure img{
+    flex:1;
+    object-fit: cover;
+}
