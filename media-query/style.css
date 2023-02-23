@@ -63,7 +63,8 @@ figure:hover{
     body {
         background-color: rgba(102, 102, 102, 0.47);
     }
-    figure{
+ /*tablet float*/
+  /*  figure{
         float: left;
         width: calc(50% - .75em);
         margin-right:1.5em;
@@ -75,6 +76,18 @@ figure:hover{
         clear: both;
         content: "";
         display: block;
+    }*/
+
+    /*tablet flex*/
+    .kitten{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5em;
+        justify-content: space-between;
+    }
+    figure{
+        width:calc(50% - .75em);
     }
 }
 
@@ -89,5 +102,10 @@ figure:hover{
         margin: 0 auto;
         background-color: white;
         padding: .1em 1.5em;
+
+    }
+
+    figure{
+        width:calc(25% - 1.25em);
     }
 }
