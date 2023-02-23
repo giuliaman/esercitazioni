@@ -9,22 +9,20 @@
     animation-duration: 4s;
     animation-timing-function: ease-out;
     animation-iteration-count:6;
+    position: relative;
 }
 
 @keyframes over-and-back {
     0%{
         background-color: rgba(185, 74, 74, 0);
-        position: relative;
         left: 0;
     }
     50%{
         background-color: rgba(185, 74, 74, 1);
-        position: relative;
         left: 50px;
     }
     100%{
         background-color: rgba(185, 74, 74, 0);
-        position: relative;
         left: 0;
     }
 
