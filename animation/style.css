@@ -9,6 +9,8 @@
     animation-duration: 4s;
     animation-timing-function: ease-out;
     animation-iteration-count:6;
+    animation-direction: reverse;
+    animation-play-state: running;
     position: relative;
 }
 
