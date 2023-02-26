@@ -1,9 +1,23 @@
-$brand-color:red;
-$spacing:1.5em;
+$brand-color: red;
+$spacing: 1.5em;
+$brand-color-dark: #1919a9;
 
-body{
-  background-color: $brand-color;
+h1, h2, h3, h4, h5, h6 {
+  color: $brand-color;
+  padding-top: $spacing * 2;
 }
-h1{
-  color:$brand-color;
+
+a {
+  color: $brand-color;
+  transition: all 2s ease-in-out;
+
+  &:active {
+    transition: inherit;
+    color: $brand-color-dark;
+  }
+
+  &:hover {
+    transition: inherit;
+    color: $brand-color-dark;
+  }
 }

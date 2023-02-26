@@ -1,9 +1,19 @@
-body {
-  background-color: red;
+h1, h2, h3, h4, h5, h6 {
+  color: red;
+  padding-top: 3em;
 }
 
-h1 {
+a {
   color: red;
+  transition: all 2s ease-in-out;
+}
+a:active {
+  transition: inherit;
+  color: #1919a9;
+}
+a:hover {
+  transition: inherit;
+  color: #1919a9;
 }
 
 /*# sourceMappingURL=main.css.map */
