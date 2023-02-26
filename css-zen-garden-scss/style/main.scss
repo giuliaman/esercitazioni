@@ -1,6 +1,9 @@
-$brand-color:green;
+$brand-color:red;
 $spacing:1.5em;
 
-h1,h2,h3,h4,h5,h6{
+body{
+  background-color: $brand-color;
+}
+h1{
   color:$brand-color;
 }
