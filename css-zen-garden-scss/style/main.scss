@@ -1,6 +1,13 @@
 $brand-color: red;
 $spacing: 1.5em;
 $brand-color-dark: #1919a9;
+@mixin clearfix{
+  &:after{
+    clear: both;
+    content:"";
+    display: block;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: $brand-color;
@@ -20,4 +27,22 @@ a {
     transition: inherit;
     color: $brand-color-dark;
   }
+
 }
+
+$tablet-screen:900px;
+@media screen and ($tablet-screen) {
+  
+}
+
+section{
+  @include clearfix;
+}
+
+/*LOOPS*/
+@for $index from 0 to 3{
+  .nav-links > li:nth-child(#{$index}){
+    transition-delay: (.1s * $index) - .1s;
+  }
+}
+
