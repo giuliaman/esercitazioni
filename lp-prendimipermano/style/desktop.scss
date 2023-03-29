@@ -1,0 +1,225 @@
+@import "variable";
+@import "font";
+
+@media screen and (min-width: $desktop-screen) {
+  .main-navbar {
+    margin: 0 auto;
+    max-width: $desktop-screen;
+  }
+
+  .logo-head {
+    max-width: 232px;
+  }
+  .navbar-collapse {
+    display: block;
+  }
+  .navbar-collapse ul {
+    display: flex;
+    list-style: none;
+    gap: 3em;
+
+  }
+  .navbar-collapse > ul > li > a {
+    color: $dark-text;
+    padding-bottom: $spacing * 2;
+    font-size: 1em;
+
+    &:hover {
+      color: $brand-color;
+      border-bottom: 2px solid $brand-color;
+      transition: $transition-link;
+    }
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  /*body*/
+  .display-no-mobile {
+    display: block;
+  }
+  #main-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main section {
+    max-width: $desktop-screen;
+    margin: 0 auto;
+  }
+
+  /*hero content*/
+  .hero-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: $desktop-screen;
+    margin: 0 auto;
+    padding: 2em 0 1em 0;
+    background: none;
+  }
+  .bg-content-head {
+    min-height: 604px;
+    top: 80px;
+  }
+
+  .img-column img {
+    max-width: 519px;
+    margin: 0 0 0 5em;
+    position: relative;
+    right: 0;
+  }
+
+  /*features*/
+  .features {
+    max-width: 1035px;
+    margin: 0 auto 3em auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .more-features {
+    display: flex;
+    flex-direction: row;
+    padding: 4.5em 1em;
+  }
+  .more-features .description {
+    flex: 1;
+    text-align: left;
+    padding: 0 5em 0 0;
+  }
+  .more-features .feature-items {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: .5em;
+    margin-top: 1em;
+
+  }
+  /*consult*/
+  section.consult {
+    flex-direction: row;
+    align-items: center;
+  }
+  .img-column.img-dx img {
+    margin: 0 5em 0 0;
+  }
+  .text-column.description {
+    text-align: left;
+  }
+  .text-column.description .cta-green {
+    margin: 1em 0;
+  }
+
+  /*chi siamo*/
+  section.chisiamo, section.price-plan {
+    background-size: cover;
+  }
+  section.chisiamo .chisiamo-content {
+    padding: 10em 1em;
+    max-width: $desktop-screen;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  .chisiamo-content div iframe {
+    width: 560px;
+    height: 315px;
+    margin-right: 2em;
+  }
+
+
+  /*feedback*/
+  section.feedback {
+    padding: 4em 1em 5em;
+  }
+  section.feedback .fb-content {
+    max-width: $desktop-screen;
+    margin: 0 auto;
+  }
+  .fb-content .fb-items {
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  /*install app*/
+  section.app {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .link-app {
+    justify-content: left;
+  }
+  .img-column.img-sx img {
+    margin: 0 0 0 5em;
+  }
+
+  /*price plane*/
+  section.price-plan .price-plan-content {
+    padding: 10em 1em;
+    max-width: $desktop-screen;
+    margin: 0 auto;
+  }
+  .price-plan-container {
+    flex-direction: row;
+    gap: 5em;
+    justify-content: center;
+  }
+  .price-plan-item {
+    padding: 50px;
+    width: 500px;
+    height: 420px;
+  }
+  .pp-title-small {
+    font-size: 21px;
+  }
+  .pp-title-big {
+    font-size: 32px;
+  }
+  .pp-price {
+    font-size: 36px;
+  }
+
+  /*contact*/
+  section.contact-container {
+    max-width: 100%;
+    padding-bottom: 5em;
+  }
+  form .contact-form {
+    width: 590px;
+    margin: 0 auto;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact-form input[type=submit] {
+    width: 40%;
+    margin: 1em 0;
+  }
+
+  /*footer*/
+  footer:before {
+    background-size: cover;
+    top: 20px;
+  }
+  .footer-content {
+    max-width: $desktop-screen;
+    margin: 0 auto;
+  }
+
+  .navbar-footer ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navbar-footer ul li {
+    padding-bottom: 0;
+  }
+  .copyright-area {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+}

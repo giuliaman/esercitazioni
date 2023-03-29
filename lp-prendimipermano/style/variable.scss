@@ -1,0 +1,70 @@
+@mixin spacing-reset{
+  padding: 0;
+  margin: 0;
+}
+
+$brand-color: #7EA69C;
+$brand-color-grad:linear-gradient(to top, rgba(126, 166, 156, 0.3), white);
+$brand-color-light:#EFDEAC;
+$dark-text:#000000;
+$spacing: .5em;
+$desktop-screen:1200px;
+$transition-link:all 0.1s ease-in-out;
+
+@mixin button-green{
+  background: $brand-color;
+  color: white;
+  padding: .8em .6em;
+  border-radius: 10em;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: $heading-secondary;
+}
+@mixin secondary-button{
+  background: #FFFFFF;
+  color: $brand-color;
+  padding: .8em .6em;
+  border-radius: 10em;
+  border: $brand-color 2px solid;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: $heading-secondary;
+}
+
+@mixin input-text{
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 10em;
+  padding:.5em 1em;
+  font-family: $heading-secondary;
+}
+@mixin input-textarea{
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 2em;
+  padding:1em 1em;
+  font-family: $heading-secondary;
+}
+
+@mixin body-button{
+  margin:1em auto;
+  display: block;
+  max-width: 220px;
+  text-align: center;
+}
+
+@mixin img-bg-fix{
+    background: url("../img/bg-head.png") no-repeat bottom center;
+    background-size: cover;
+    width: 100%;
+}
+@mixin img-bg-body{
+  background: url("../img/bg-body.png") no-repeat top center;
+  max-width: 100%;
+}
+
+@mixin img-bg-footer{
+  background: url("../img/bg-footer.png") no-repeat top center;
+  max-width:100%;
+}

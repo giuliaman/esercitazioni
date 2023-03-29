@@ -1,0 +1,433 @@
+@import "variable";
+@import "font";
+
+:root {
+  box-sizing: border-box;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @include spacing-reset;
+  color: $dark-text;
+  margin-bottom: $spacing;
+}
+
+body {
+  @include spacing-reset;
+}
+
+/*header*/
+.logo-head {
+  max-width: 126px;
+  margin: .6rem;
+}
+
+.navbar-toggler {
+  font-size: 1.25em;
+  padding: .25em .75em;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../img/hambergermenu.svg");
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.main-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.main-navbar .cta-green {
+  margin-left: auto;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+/*body*/
+.display-no-mobile{
+  display: none;
+}
+.bg-content-head {
+  @include img-bg-fix;
+  position: absolute;
+  min-height: 134px;
+  top: 250px;
+}
+
+#main-content {
+  position: relative;
+  top: 80px;
+}
+
+/*hero content*/
+section {
+  padding: 0 1em;
+}
+
+.hero-content {
+  padding: 1em 1em 6em;
+  display: flex;
+  flex-direction: column;
+}
+
+/*form*/
+.text-column {
+  flex: 1;
+}
+
+.img-column {
+  flex: 1;
+  object-fit: cover;
+}
+
+.img-column img {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.subscription-form {
+  position: relative;
+  margin-top: 1em;
+}
+
+.subscription-form input[type="text"] {
+  width: 100%;
+  height: 48px;
+  display: inline;
+  @include input-text;
+}
+
+.subscription-form input[type=submit] {
+  @include button-green;
+  min-width: 120px;
+  height: 48px;
+  position: absolute;
+  right: 0;
+}
+
+/*features block*/
+.features {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.feature {
+  flex: 1;
+  object-fit: cover;
+  background-color: $brand-color-light;
+  color: $dark-text;
+  text-align: center;
+  padding: 2em 1.5em;
+  border-radius: .5em;
+  box-shadow: 3px 3px 12px rgba(126, 166, 156, 0.38);;
+}
+
+.more-features .description {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.feature-item {
+  display: flex;
+  margin-bottom: $spacing * 3;
+}
+
+.feature-item main {
+  text-align: left;
+  margin-left: 1em;
+}
+
+.icon-item1 {
+  background: url("../img/icon1.svg") no-repeat center;
+  width: 37px;
+  height: 35px;
+}
+
+.icon-item2 {
+  background: url("../img/icon2.svg") no-repeat center;
+  width: 37px;
+  height: 35px;
+}
+
+.icon-item3 {
+  background: url("../img/icon3.svg") no-repeat center;
+  width: 37px;
+  height: 35px;
+}
+
+.icon-item4 {
+  background: url("../img/icon4.svg") no-repeat center;
+  width: 37px;
+  height: 35px;
+}
+
+section.consult {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-column.description {
+  text-align: center;
+}
+
+.text-column.description .cta-green {
+  @include body-button;
+}
+
+/*chi siamo*/
+
+section.chisiamo, section.price-plan {
+  @include img-bg-body;
+  margin-top: 2em;
+  background-size: contain;
+}
+
+section.chisiamo .chisiamo-content {
+  padding: 5em 1em;
+  display: flex;
+  flex-direction: column;
+}
+.chisiamo-content div iframe{
+  width: 100%;
+  height: 220px;
+  margin-bottom: 2em;
+}
+
+/*feedback*/
+section.feedback {
+  max-width: 100%;
+  background-color: $brand-color-light;
+  padding: 2em 1em 3em;
+}
+
+.fb-content .fb-items article {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  padding: 1.5em;
+  margin-top: 2em;
+}
+
+.fb-caption {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.fb-caption .fb-name p {
+  @include spacing-reset;
+}
+
+.fb-content .fb-items {
+  display: flex;
+  flex-direction: column;
+}
+
+/*install app*/
+section.app {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.link-app {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+/*PRICE PLAN*/
+section.price-plan .price-plan-content {
+  padding: 5em 1em;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.price-plan-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.price-plan-item {
+  background: white;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px;
+  gap: 15px;
+  font-family: $heading-secondary;
+  margin: 1em 0;
+}
+
+.border-green {
+  border: $brand-color 2px solid;
+}
+
+.pp-title-small {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pp-title-big {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: .3em;
+}
+
+.pp-price {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.pp-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pp-features ul li {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  margin-bottom: .5em;
+}
+
+.pp-features ul li .p-big {
+  margin: 0;
+}
+
+/*contact*/
+section.contact-container {
+  background: $brand-color-light;
+  width: 100%;
+  padding: 1.5em 1em 2em 1em;
+}
+
+section.contact-container .contact {
+  margin: 2em auto;
+  width: 100%;
+}
+
+.contact form {
+  margin: 1em 0 2em 0;
+  width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-form input[type=text], .contact-form input[type=email] {
+  @include input-text;
+  height: 40px;
+}
+
+.contact-form textarea {
+  @include input-textarea;
+}
+
+.contact-form input[type=submit] {
+  @include button-green;
+  width: 100%;
+  margin: 1em auto;
+}
+
+/*footer*/
+.footer-container {
+  position: relative;
+  background-color: $brand-color;
+  max-width: 100%;
+  padding:1em;
+  color:white;
+}
+footer::before{
+  content:'';
+  height:100px;
+  @include img-bg-footer;
+  display: block;
+  position: relative;
+  background-size: cover;
+  top:65px;
+}
+
+.footer-content {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-social h3{
+  color:white;
+}
+.secondary-navbar{
+  margin:2em 0;
+}
+.navbar-footer ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-footer ul li{
+  padding-bottom: $spacing * 2;
+}
+.navbar-footer ul li a{
+  font-family: $heading-secondary;
+  color: white;
+  font-size: 1em;
+}
+.cta-yell{
+  @include button-green;
+  height: 38px;
+  background-color: $brand-color-light;
+  color:$dark-text;
+  width:230px;
+}
+.copyright-area{
+  justify-content: center;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0;
+}
+.copyright-area p{
+  color:white;
+}
+
+@import "desktop";
+
+
